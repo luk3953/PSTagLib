@@ -22,26 +22,23 @@ Clone the repository and import the module directly:
 
 ```powershell
 Import-Module ./PSTaglib.psd1 -Force
-
+```
 ## Usage
 
 Import your audio files as the AudioFile object:
-
 ```powershell
 $af = Get-Childitem | New-AudioFile
-
+```
 Get the Year tag for all imported AudioFile objects:
-
 ```powershell
 $af | Get-AudioTag -Name "Year"
-
-
+```
 Change the Year tag on all imported files:
-
 ```powershell
 $af | Set-AudioTag -Name "Year" -Value 1984
-
-
+```
 Save the modified tags into the original files:
-
+```powershell
 $af | Save-AudioFile
+```
+
