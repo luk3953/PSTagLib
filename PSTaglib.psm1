@@ -27,32 +27,24 @@ $script:TagTypeMap = @{
     BeatsPerMinute      = [uint32]
 }
 
-
-$script:TagNames = [string[]]@(
-    'Title'
-    'TitleSort'
-    'Album'
-    'AlbumSort'
-    'Artists'
-    'Performers'
-    'PerformersSort'
-    'AlbumArtists'
-    'AlbumArtistsSort'
-    'Composers'
-    'ComposersSort'
-    'Genres'
-    'Year'
-    'Track'
-    'TrackCount'
-    'Disc'
-    'DiscCount'
-    'Comment'
-    'Lyrics'
-    'Grouping'
-    'BeatsPerMinute'
-    'Conductor'
-    'Copyright'
+$script:tagLibFileTypes = @(
+    "mp3",
+    "flac",
+    "ogg",
+    "wma",
+    "mp4",
+    "aac",
+    "m4a",
+    "ape",
+    "wav",
+    "aiff",
+    "au",
+    "alac",
+    "wavpack",
+    "spx",
+    "tta"
 )
+
 
 
 Get-ChildItem -Path $modulesDir -Filter '*.ps1' -Recurse -File |

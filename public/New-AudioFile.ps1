@@ -11,6 +11,12 @@ function New-AudioFile {
     )
 
     process {
-        [AudioFile]::new($Path)
+
+        if (($Path.split('.'))[-1] -notin $script:tagLibFileTypes) {
+            Write-Warning "File type not supported. Skipping path $Path"
+            return
+        }
+
+        return [AudioFile]::new($Path)
     }
 }

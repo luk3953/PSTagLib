@@ -13,8 +13,6 @@ function Get-AudioTag {
         if (-not $script:TagTypeMap.ContainsKey($Name)) {
             throw "the value not in tagtypemap. The options are $($script:TagTypeMap)"
         }
-
-
     }
 
     process {
