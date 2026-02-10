@@ -25,7 +25,7 @@ function Get-AudioMissingTag {
 
         }
 
-        return @{$AudioFile.FileName() = $missingTags | sort-object}
+        @{$AudioFile.FileName() = $missingTags | sort-object}
 
     }
 

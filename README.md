@@ -41,4 +41,7 @@ Save the modified tags into the original files:
 ```powershell
 $af | Save-AudioFile
 ```
-
+Find Lyrics and set them as a tag. (use Save-AudioFile to save to file.)
+```powershell
+$af | Get-AudioFileLyrics | Set-AudioFileLyrics
+```

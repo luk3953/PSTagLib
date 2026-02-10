@@ -17,6 +17,6 @@ function New-AudioFile {
             return
         }
 
-        return [AudioFile]::new($Path)
+        [AudioFile]::new($Path)
     }
 }
