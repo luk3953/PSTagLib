@@ -5,9 +5,16 @@ $audioFiles = $paths | new-audiofile
 
 $audioFiles | foreach-Object {
 
+
     $json = $_ | export-AudioFileAsObject | Convertto-Json
 
-    new-Item ($_.Path.replace("flac","json")) -value $json
 
+    try {
+    new-Item ($_.Path.replace("flac","json")) -value $json -force
+        write-host "success"
+    }
+    catch {
+        write-error "failure"
+    }
 
 }
