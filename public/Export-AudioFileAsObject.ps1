@@ -9,8 +9,7 @@ function Export-AudioFileAsObject {
 
     process {
 
-        $tags = get-audiotag -AudioFile $AudioFile
-
+        $tags = $AudioFile.FileTags
         @{
 
             title        = $tags.Title
