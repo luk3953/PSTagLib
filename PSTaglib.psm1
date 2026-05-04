@@ -31,6 +31,7 @@ $script:tagLibFileTypes = @(
     "mp3",
     "flac",
     "ogg",
+    "opus",
     "wma",
     "mp4",
     "aac",
